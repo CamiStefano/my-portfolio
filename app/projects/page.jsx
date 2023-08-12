@@ -4,6 +4,6 @@ export const metadata = {
   }
   
 
-export default function Page(){
+export default function Projects(){
     return <h1>Mis proyectos</h1>
 }
