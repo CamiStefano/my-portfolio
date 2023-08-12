@@ -1,10 +1,14 @@
 import React from 'react';
+import { Wrapper, Title } from './styles';
 
 export const metadata = {
   title: 'Results summary component',
-  description: 'Proyectos de Cami Stefano',
 };
 
 export default function ResultsSummary() {
-  return <h1>Results summary component</h1>;
+  return (
+    <Wrapper>
+      <Title>Results summary component</Title>
+    </Wrapper>
+  );
 }
