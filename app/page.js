@@ -1,9 +1,11 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Home() {
-  return <>
-  <nav>
-    <Link href="/projects">Proyectos</Link>
-  </nav>
-  </>
+  return (
+    <>
+      <nav>
+        <Link href="/projects">Proyectos</Link>
+      </nav>
+    </>
+  );
 }
