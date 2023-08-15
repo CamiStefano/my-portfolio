@@ -1,8 +1,8 @@
 import React from 'react';
-import { Outfit } from 'next/font/google';
+import { Hanken_Grotesk } from 'next/font/google';
 import { Wrapper, Title, Card } from './styles';
 
-export const outfit = Outfit({
+export const HankenGrotesk = Hanken_Grotesk({
   weight: ['400', '700'],
   style: ['normal'],
   subsets: ['latin'],
@@ -14,14 +14,18 @@ export const metadata = {
 
 export default function ResultsSummary() {
   return (
-    <Wrapper className={outfit.className}>
+    <Wrapper className={HankenGrotesk.className}>
       <Card className="card">
-        <div className="results">
-          <Title className="results__title">Your Result</Title>
-          <div className="results__circle">
-            <p className="">76</p>
-            <p>of 100</p>
+        <div className="result">
+          <Title className="result__title">Your Result</Title>
+          <div className="result__circle">
+            <p className="result__number">76</p>
+            <p className="result__total__number">of 100</p>
           </div>
+          <p className="result__subtitle">Great</p>
+          <p className="result__paragraph">
+            Your performance exceed 65% of the people conducting the test here!
+          </p>
         </div>
         <div className="summary">
           <Title className="summary__title">Summary</Title>

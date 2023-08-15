@@ -16,13 +16,18 @@ export const Wrapper = styled.section`
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: ${theme.lightGray};
 `;
 
 export const Card = styled.section`
+  display: flex;
+  background-color: ${theme.white};
+  border-radius: 32px;
+  width: 736px;
+  height: 512px;
+
   & .card {
-    display: flex;
-    background-color: ${theme.white};
   }
   & .result {
     width: 368px;
@@ -30,17 +35,23 @@ export const Card = styled.section`
     border-radius: 32px;
     display: flex;
     flex-direction: column;
-    border-radius: 32px;
+    align-items: center;
     background: linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%);
   }
 
-  & .results__title {
+  & .result__title {
     color: ${theme.lightBlue};
+    padding-bottom: 35px;
   }
 
-  & .results__circle {
+  & .result__circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     height: 200px;
+    border-radius: 100px;
     background: linear-gradient(
       180deg,
       #4d21c9 0%,
@@ -49,12 +60,44 @@ export const Card = styled.section`
     );
   }
 
+  & .result__number {
+    color: ${theme.white};
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: 800;
+  }
+
+  & .result__subtitle {
+    color: ${theme.white};
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    padding-top: 28px;
+  }
+
+  & .result__paragraph {
+    color: ${theme.lightBlue};
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 500;
+    width: 260px;
+    text-align: center;
+    padding-top: 14px;
+  }
+
+  & .result__total__number {
+    color: ${theme.lightBlue};
+    opacity: 0.5168;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 700;
+  }
+
   & .summary {
-    width: 736px;
-    height: 512px;
     border-radius: 32px;
     display: flex;
     flex-direction: column;
+    background-color: ${theme.white};
   }
 
   & .summary__title {
@@ -66,6 +109,7 @@ export const Title = styled.h2`
   font-size: 24px;
   line-height: 31px;
   font-weight: 700;
+  padding-top: 38px;
 `;
 
 export const Paragraph = styled.p`
