@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const theme = {
   white: '#FFFFFF',
+  red: '#FF5555',
   lightGray: 'hsl(212, 45%, 89%)',
   lightBlue: '#CAC9FF',
   grayishBlue: 'hsl(220, 15%, 55%)',
@@ -27,8 +28,6 @@ export const Card = styled.section`
   width: 736px;
   height: 512px;
 
-  & .card {
-  }
   & .result {
     width: 368px;
     height: 512px;
@@ -95,14 +94,39 @@ export const Card = styled.section`
 
   & .summary {
     border-radius: 32px;
-    display: flex;
-    flex-direction: column;
     background-color: ${theme.white};
+    width: 288px;
+    padding-left: 40px;
   }
 
   & .summary__title {
-    color: ${theme.lightBlue};
+    color: ${theme.darkNavy};
+    padding-bottom: 28px;
   }
+
+  & .summary__reaction {
+    width: 288px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%),
+      #f55;
+    color: ${theme.darkNavy};
+    display: flex;
+  }
+
+  & .summary__reaction__img {
+    padding-right: 12px;
+  }
+
+  & .summary__reaction__p {
+    color: ${theme.red};
+  }
+`;
+
+export const SummaryCards = styled.div`
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 500;
+  padding: 16px;
+  border-radius: 12px;
 `;
 
 export const Title = styled.h2`
@@ -110,8 +134,4 @@ export const Title = styled.h2`
   line-height: 31px;
   font-weight: 700;
   padding-top: 38px;
-`;
-
-export const Paragraph = styled.p`
-  font-size: 15px;
 `;
