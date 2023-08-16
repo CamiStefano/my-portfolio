@@ -53,8 +53,8 @@ export default function ResultsSummary() {
                 <span className="summary__reaction__p">Reaction</span>
               </div>
               <div>
-                <span className="summary__reaction__number">80 </span>
-                <span className="summary__reaction__number__total">/ 100</span>
+                <span className="summary__number">80 </span>
+                <span className="summary__number__total">/ 100</span>
               </div>
             </SummaryCards>
 
@@ -152,7 +152,7 @@ export default function ResultsSummary() {
                     />
                   </svg>
                 </span>
-                <span className="summary__visual__p">Verbal</span>
+                <span className="summary__visual__p">Visual</span>
               </div>
               <div>
                 <span className="summary__number">61 </span>
