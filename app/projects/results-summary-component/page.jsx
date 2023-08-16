@@ -1,7 +1,11 @@
 import React from 'react';
+import Image from 'next/image';
+
 import { Hanken_Grotesk } from 'next/font/google';
 import { Wrapper, Title, Card, SummaryCards } from './styles';
 import Button from './components/Button';
+import StatCard from './components/StatCard';
+import WarningSVG from './assets/warning.svg';
 
 export const HankenGrotesk = Hanken_Grotesk({
   weight: ['400', '700'],
@@ -31,25 +35,20 @@ export default function ResultsSummary() {
         <div className="summary">
           <Title className="summary__title">Summary</Title>
           <div className="summary__cards">
+            <StatCard
+              icon={<Image src={WarningSVG} alt="Warning icon" />}
+              label="Reaction"
+              points={80}
+            />
+
+            <StatCard
+              icon={<Image src={WarningSVG} alt="Warning icon" />}
+              label="Memory"
+              points={92}
+            />
             <SummaryCards className="summary__reaction__cards">
               <div>
-                <span className="summary__reaction__img">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M10.8333 8.33333V2.5L4.16663 11.6667H9.16663V17.5L15.8333 8.33333H10.8333Z"
-                      stroke="#FF5555"
-                      strokeWidth="1.25"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
+                <span className="summary__reaction__img"></span>
                 <span className="summary__reaction__p">Reaction</span>
               </div>
               <div>
@@ -160,7 +159,7 @@ export default function ResultsSummary() {
               </div>
             </SummaryCards>
           </div>
-          <Button></Button>
+          <Button>Continue</Button>
         </div>
       </Card>
     </Wrapper>

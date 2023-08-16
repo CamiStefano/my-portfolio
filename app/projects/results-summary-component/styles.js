@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 
-const theme = {
+export const theme = {
   white: '#FFFFFF',
   red: '#FF5555',
   yelow: '#FFB21E',
@@ -107,38 +107,6 @@ export const Card = styled.section`
     padding-bottom: 28px;
   }
 
-  & .summary__reaction__cards {
-    width: 288px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%),
-      #f55;
-    color: ${theme.darkNavy};
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
-  }
-
-  & .summary__reaction__img {
-    padding-right: 12px;
-    vertical-align: middle;
-  }
-
-  & .summary__reaction__p {
-    color: ${theme.red};
-    font-weight: 500;
-    font-size: 18px;
-  }
-
-  & .summary__number {
-    color: ${theme.darkNavy};
-    font-weight: 700;
-  }
-
-  & .summary__number__total {
-    color: ${theme.darkNavy};
-    font-weight: 700;
-    opacity: 0.5;
-  }
-
   & .summary__memory__img {
     padding-right: 12px;
     vertical-align: middle;
@@ -193,7 +161,7 @@ export const Card = styled.section`
   }
 
   & .summary__visual__cards {
-    width: 288px;
+    width: 100%;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%),
       #1125d6;
     color: ${theme.darkNavy};
@@ -216,26 +184,4 @@ export const Title = styled.h2`
   line-height: 31px;
   font-weight: 700;
   padding-top: 38px;
-`;
-
-export const Button = styled.button`
-  width: 288px;
-  height: 56px;
-  border-radius: 128px;
-  border: none;
-  background: ${theme.darkNavy};
-  color: ${theme.white};
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all .4s ease;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 1;
-    background: ${theme.gradient1};
-  }
 `;
