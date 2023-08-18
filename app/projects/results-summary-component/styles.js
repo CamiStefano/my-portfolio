@@ -4,9 +4,6 @@ import styled from 'styled-components';
 
 export const theme = {
   white: '#FFFFFF',
-  red: '#FF5555',
-  yelow: '#FFB21E',
-  green: '#00BB8F',
   blue: '#1125D6',
   lightBlue: '#CAC9FF',
   veryLightBlue: '#ECF2FF',
@@ -134,7 +131,7 @@ export const Card = styled.section`
   }
 
   & .summary__verbal__p {
-    color: ${theme.green};
+    color: #00bb8f;
     font-weight: 500;
     font-size: 18px;
   }
