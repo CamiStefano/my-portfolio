@@ -27,6 +27,7 @@ export const Card = styled.section`
   border-radius: 32px;
   width: 736px;
   height: 512px;
+  gap: 2.5rem;
 
   & .result {
     width: 368px;
@@ -95,8 +96,7 @@ export const Card = styled.section`
   & .summary {
     border-radius: 32px;
     background-color: ${theme.white};
-    width: 288px;
-    padding-left: 40px;
+    width: 18rem;
   }
 
   & .summary__title {
@@ -109,41 +109,9 @@ export const Card = styled.section`
     vertical-align: middle;
   }
 
-  & .summary__memory__p {
-    color: ${theme.yelow};
-    font-weight: 500;
-    font-size: 18px;
-  }
-
-  & .summary__memory__cards {
-    width: 288px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%),
-      #ffb21e;
-    color: ${theme.darkNavy};
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
-  }
-
   & .summary__verbal__img {
     padding-right: 12px;
     vertical-align: middle;
-  }
-
-  & .summary__verbal__p {
-    color: #00bb8f;
-    font-weight: 500;
-    font-size: 18px;
-  }
-
-  & .summary__verbal__cards {
-    width: 288px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%),
-      #00bb8f;
-    color: ${theme.darkNavy};
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
   }
 
   & .summary__visual__img {
@@ -155,16 +123,6 @@ export const Card = styled.section`
     color: ${theme.blue};
     font-weight: 500;
     font-size: 18px;
-  }
-
-  & .summary__visual__cards {
-    width: 100%;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%),
-      #1125d6;
-    color: ${theme.darkNavy};
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 41px;
   }
 `;
 

@@ -6,12 +6,14 @@ import { theme } from '../styles';
 
 const StyledStatCard = styled.div`
   width: 100%;
+  border-radius: 12px;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%),
     ${(props) => props.color || 'grey'};
   color: ${(props) => props.color || 'grey'};
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  margin-bottom: 1rem;
 
   & .img {
     color: ${(props) => props.color};
