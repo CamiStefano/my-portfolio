@@ -17,12 +17,15 @@ const Button = styled.button`
   margin-top: 1.5rem;
 
   &:hover {
-    opacity: 0.8;
+    background: #2f2ce9;
   }
 
   &:active {
-    opacity: 1;
     background: ${theme.gradient1};
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 0.5rem;
   }
 `;
 

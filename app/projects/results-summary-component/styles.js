@@ -24,24 +24,42 @@ export const Card = styled.section`
   display: flex;
   background-color: ${theme.white};
   box-shadow: 0px 30px 60px 0px rgba(61, 108, 236, 0.15);
-  border-radius: 32px;
-  width: 736px;
-  height: 512px;
+  border-radius: 2rem;
+  width: 46rem;
+  height: 32rem;
   gap: 2.5rem;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 23rem;
+    height: 50.5rem;
+    gap: 0;
+    display: flex;
+    align-items: center;
+  }
+
   & .result {
-    width: 368px;
-    height: 512px;
-    border-radius: 32px;
+    width: 23rem;
+    height: 32rem;
+    border-radius: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: ${theme.gradient1};
+
+    @media (max-width: 768px) {
+      width: 23rem;
+      height: 22rem;
+    }
   }
 
   & .result__title {
     color: ${theme.lightBlue};
-    padding-bottom: 35px;
+    padding-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      padding-bottom: 1.5rem;
+    }
   }
 
   & .result__circle {
@@ -49,8 +67,8 @@ export const Card = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
     border-radius: 100px;
     background: linear-gradient(
       180deg,
@@ -58,71 +76,85 @@ export const Card = styled.section`
       rgba(37, 33, 201, 0) 100%,
       rgba(37, 33, 201, 0) 100%
     );
+
+    @media (max-width: 768px) {
+      width: 8.75rem;
+      height: 8.75rem;
+    }
   }
 
   & .result__number {
     color: ${theme.white};
-    font-size: 72px;
-    line-height: 72px;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
     font-weight: 800;
-  }
 
-  & .result__subtitle {
-    color: ${theme.white};
-    font-size: 32px;
-    line-height: 42px;
-    font-weight: 700;
-    padding-top: 28px;
-  }
-
-  & .result__paragraph {
-    color: ${theme.lightBlue};
-    font-size: 18px;
-    line-height: 23px;
-    font-weight: 500;
-    width: 260px;
-    text-align: center;
-    padding-top: 14px;
+    @media (max-width: 768px) {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+    }
   }
 
   & .result__total__number {
     color: ${theme.lightBlue};
     opacity: 0.5168;
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
     font-weight: 700;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+  }
+
+  & .result__subtitle {
+    color: ${theme.white};
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    padding-top: 1.75rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      padding-top: 1.5rem;
+    }
+  }
+
+  & .result__paragraph {
+    color: ${theme.lightBlue};
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    width: 16.25rem;
+    text-align: center;
+    padding-top: 14px;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      line-height: 1.125rem;
+      padding-top: 0.5rem;
+    }
   }
 
   & .summary {
-    border-radius: 32px;
+    border-radius: 2rem;
     background-color: ${theme.white};
     width: 18rem;
+
+    @media (max-width: 768px) {
+      width: 19.5rem;
+    }
   }
 
   & .summary__title {
     color: ${theme.darkNavy};
-    padding-bottom: 28px;
-  }
+    padding-bottom: 1.75rem;
 
-  & .summary__memory__img {
-    padding-right: 12px;
-    vertical-align: middle;
-  }
-
-  & .summary__verbal__img {
-    padding-right: 12px;
-    vertical-align: middle;
-  }
-
-  & .summary__visual__img {
-    padding-right: 12px;
-    vertical-align: middle;
-  }
-
-  & .summary__visual__p {
-    color: ${theme.blue};
-    font-weight: 500;
-    font-size: 18px;
+    @media (max-width: 768px) {
+      padding-bottom: 1.5rem;
+    }
   }
 `;
 
@@ -135,8 +167,14 @@ export const SummaryCards = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 24px;
-  line-height: 31px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
-  padding-top: 38px;
+  padding-top: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    padding-top: 1.5rem;
+  }
 `;
