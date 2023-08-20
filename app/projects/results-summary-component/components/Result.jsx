@@ -18,7 +18,7 @@ const StyledResult = styled.div`
     height: 22rem;
   }
 
-  & .result__title {
+  & .title {
     color: ${theme.lightBlue};
     padding-bottom: 2rem;
 
@@ -27,7 +27,7 @@ const StyledResult = styled.div`
     }
   }
 
-  & .result__circle {
+  & .circle {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +48,7 @@ const StyledResult = styled.div`
     }
   }
 
-  & .result__number {
+  & .number {
     color: ${theme.white};
     font-size: 4.5rem;
     line-height: 4.5rem;
@@ -60,7 +60,7 @@ const StyledResult = styled.div`
     }
   }
 
-  & .result__total__number {
+  & .total__number {
     color: ${theme.lightBlue};
     opacity: 0.5168;
     font-size: 1.125rem;
@@ -73,7 +73,7 @@ const StyledResult = styled.div`
     }
   }
 
-  & .result__subtitle {
+  & .subtitle {
     color: ${theme.white};
     font-size: 2rem;
     line-height: 2.5rem;
@@ -87,7 +87,7 @@ const StyledResult = styled.div`
     }
   }
 
-  & .result__paragraph {
+  & .paragraph {
     color: ${theme.lightBlue};
     font-size: 1.125rem;
     line-height: 1.5rem;
@@ -107,13 +107,13 @@ const StyledResult = styled.div`
 function Result() {
   return (
     <StyledResult className="result">
-      <Title className="result__title">Your Result</Title>
-      <div className="result__circle">
-        <p className="result__number">76</p>
-        <p className="result__total__number">of 100</p>
+      <Title className="title">Your Result</Title>
+      <div className="circle">
+        <p className="number">76</p>
+        <p className="total__number">of 100</p>
       </div>
-      <p className="result__subtitle">Great</p>
-      <p className="result__paragraph">
+      <p className="subtitle">Great</p>
+      <p className="paragraph">
         Your performance exceed 65% of the people conducting the test here!
       </p>
     </StyledResult>

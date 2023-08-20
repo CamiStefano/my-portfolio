@@ -16,7 +16,7 @@ const StyledSummary = styled.div`
     width: 19.5rem;
   }
 
-  & .summary__title {
+  & .title {
     color: ${theme.darkNavy};
     padding-bottom: 1.75rem;
 
@@ -29,8 +29,8 @@ const StyledSummary = styled.div`
 function Result() {
   return (
     <StyledSummary className="summary">
-      <Title className="summary__title">Summary</Title>
-      <div className="summary__cards">
+      <Title className="title">Summary</Title>
+      <div className="cards">
         <StatCard icon={<ThunderSVG />} label="Reaction" points={80} color="#FF5555" />
         <StatCard icon={<BrainSVG />} label="Memory" points={92} color="#FFB21E" />
         <StatCard icon={<VerbalSVG />} label="Verbal" points={61} color="#00BB8F" />
