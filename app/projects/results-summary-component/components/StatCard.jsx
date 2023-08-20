@@ -56,11 +56,9 @@ const StyledStatCard = styled.div`
 function StatCard({ icon, label, points, color }) {
   return (
     <StyledStatCard color={color}>
-      <div color={color}>
+      <div>
         <span className="img">{icon}</span>
-        <span className="label" color={color}>
-          {label}
-        </span>
+        <span className="label">{label}</span>
       </div>
       <div>
         <span className="points">{points}</span>

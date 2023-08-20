@@ -6,7 +6,7 @@ import { theme } from '../styles';
 const Button = styled.button`
   width: 100%;
   height: 56px;
-  border-radius: 128px;
+  border-radius: 8rem;
   border: none;
   background: ${theme.darkNavy};
   color: ${theme.white};
