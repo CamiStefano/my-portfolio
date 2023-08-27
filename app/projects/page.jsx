@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
@@ -6,5 +7,16 @@ export const metadata = {
 };
 
 export default function Projects() {
-  return <h1>Mis proyectos</h1>;
+  return (
+    <section>
+      <div>
+        <h1>Mis proyectos</h1>
+        <ul>
+          <li>
+            <Link href="/projects/results-summary-component">Results summary Component</Link>
+          </li>
+        </ul>
+      </div>
+    </section>
+  );
 }
