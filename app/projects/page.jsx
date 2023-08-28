@@ -15,6 +15,11 @@ export default function Projects() {
           <li>
             <Link href="/projects/results-summary-component">Results summary Component</Link>
           </li>
+          <li>
+            <Link href="/projects/skilled-elearning-landing-page">
+              Skilled e-learning landing page
+            </Link>
+          </li>
         </ul>
       </div>
     </section>
