@@ -6,13 +6,14 @@ import { theme } from '../styles';
 import { LogoDark } from '../icons';
 import Button from './Button';
 
-const StyledNavBar = styled.footer`
+const StyledNavBar = styled.nav`
   width: 100%;
-  height: 7.5rem;
+  height: 7rem;
   background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 
   & .container {
     width: 100%;
