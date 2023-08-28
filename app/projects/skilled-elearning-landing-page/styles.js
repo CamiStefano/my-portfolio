@@ -27,6 +27,33 @@ export const Wrapper = styled.section`
   justify-content: space-between;
   align-items: center;
   background: ${theme.gradient3};
+
+  & .container {
+    width: 100%;
+    max-width: 1110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .main__section {
+      width: 50%;
+    }
+
+    & .main__image img {
+      top: 0;
+      right: 0;
+      position: absolute;
+    }
+
+    & .button {
+      background: ${theme.gradient1};
+      transition: all 0.4s ease;
+
+      &:hover {
+        background: ${theme.gradient1hover};
+      }
+    }
+  }
 `;
 
 export const Title = styled.h1`
@@ -46,6 +73,8 @@ export const Paragraph = styled.p`
   line-height: 1.75rem;
   font-weight: 500;
   color: ${theme.grey};
+  padding: 1.81rem 0rem 2.5rem;
+  max-width: 27rem;
 
   @media (max-width: 768px) {
     font-size: 1.125rem;

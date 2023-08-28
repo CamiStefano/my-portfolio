@@ -21,16 +21,16 @@ export default function skilledElearning() {
   return (
     <Wrapper className={PluaJacartaSans.className}>
       <NavBar />
-      <section>
-        <div className="main__text">
+      <section className="container ">
+        <div className="main__section">
           <Title>Maximize skill, minimize budget</Title>
           <Paragraph>
             Our modern courses across a range of in-demand skills will give you the knowledge you
             need to live the life you want.
           </Paragraph>
-          <Button>Get Started</Button>
+          <Button className="button">Get Started</Button>
         </div>
-        <div>
+        <div className="main__image">
           <Image
             src="/person.png"
             width={710}
