@@ -21,38 +21,16 @@ export const theme = {
 
 export const Wrapper = styled.section`
   width: 100%;
-  height: 100vh;
+  max-width: 2100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   background: ${theme.gradient3};
 
   & .container {
     width: 100%;
     max-width: 1110px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    & .main__section {
-      width: 50%;
-    }
-
-    & .main__image img {
-      top: 0;
-      right: 0;
-      position: absolute;
-    }
-
-    & .button {
-      background: ${theme.gradient1};
-      transition: all 0.4s ease;
-
-      &:hover {
-        background: ${theme.gradient1hover};
-      }
-    }
   }
 `;
 

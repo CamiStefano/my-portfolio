@@ -1,11 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
 
 import { Plus_Jakarta_Sans as plusJacartaSans } from 'next/font/google';
-import { Wrapper, Title, Paragraph } from './styles';
+import { Wrapper } from './styles';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
-import Button from './components/Button';
+import Hero from './components/Hero';
+import CardsSection from './components/CardsSection';
 
 export const PluaJacartaSans = plusJacartaSans({
   weight: ['400', '700'],
@@ -19,27 +19,13 @@ export const metadata = {
 
 export default function skilledElearning() {
   return (
-    <Wrapper className={PluaJacartaSans.className}>
-      <NavBar />
-      <section className="container ">
-        <div className="main__section">
-          <Title>Maximize skill, minimize budget</Title>
-          <Paragraph>
-            Our modern courses across a range of in-demand skills will give you the knowledge you
-            need to live the life you want.
-          </Paragraph>
-          <Button className="button">Get Started</Button>
-        </div>
-        <div className="main__image">
-          <Image
-            src="/person.png"
-            width={710}
-            height={791}
-            alt="Picture of a person drinking coffee"
-          />
-        </div>
-      </section>
+    <>
+      <Wrapper className={PluaJacartaSans.className}>
+        <NavBar />
+        <Hero />
+        <CardsSection />
+      </Wrapper>
       <Footer />
-    </Wrapper>
+    </>
   );
 }
