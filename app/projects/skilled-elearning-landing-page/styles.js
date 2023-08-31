@@ -29,7 +29,7 @@ export const Wrapper = styled.section`
 
   & .container {
     width: 100%;
-    max-width: 1110px;
+    max-width: 980px;
 
   }
 `;
@@ -47,12 +47,12 @@ export const Title = styled.h1`
 `;
 
 export const Paragraph = styled.p`
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.75rem;
   font-weight: 500;
   color: ${theme.grey};
   padding: 1.81rem 0rem 2.5rem;
-  max-width: 27rem;
+  max-width: 24rem;
 
   @media (max-width: 768px) {
     font-size: 1.125rem;

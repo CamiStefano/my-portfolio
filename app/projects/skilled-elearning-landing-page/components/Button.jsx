@@ -4,12 +4,12 @@ import { styled } from 'styled-components';
 import { theme } from '../styles';
 
 const Button = styled.button`
-  width: 10.4375rem;
-  height: 3.5rem;
+  width: 9rem;
+  height: 3rem;
   border-radius: 1.75rem;
   border: none;
   color: ${theme.light};
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
 
