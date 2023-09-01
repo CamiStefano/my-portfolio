@@ -8,8 +8,8 @@ import Button from './Button';
 
 const StyledHero = styled.section`
       display: flex;
-      padding-top: 7rem;
-      height: 40rem;
+      padding: 7rem 2rem 0rem;
+      height: 42rem;
 
       & .main__section__text {
         display: flex;
@@ -47,8 +47,8 @@ function Hero() {
       <div className="main__section__image">
         <Image
           src="/person.png"
-          width={600}
-          height={668}
+          width={710}
+          height={791}
           alt="Picture of a person drinking coffee"
         />
       </div>

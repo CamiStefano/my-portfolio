@@ -29,7 +29,7 @@ export const Wrapper = styled.section`
 
   & .container {
     width: 100%;
-    max-width: 980px;
+    max-width: 1110px;
 
   }
 `;

@@ -10,13 +10,14 @@ import { theme } from '../styles';
 const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  width: 21.875rem;
-  height: 20.125rem;
+  gap: 1.2rem;
+  width: 20rem;
+  height: 19rem;
   border-radius: 0.9375rem;
   background: ${theme.light};
   padding: 4rem 2rem 2.5rem;
   position: relative;
+  margin-top: 3rem;
 
   & .img {
     position: absolute;
@@ -44,7 +45,6 @@ const StyledCard = styled.div`
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 1.75rem;
     transition: all 0.5s ease;
 
     &:hover {

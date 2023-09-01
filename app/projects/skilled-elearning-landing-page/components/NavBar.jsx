@@ -16,7 +16,8 @@ const StyledNavBar = styled.nav`
   z-index: 100;
 
   & .container {
-    max-width: 980px;
+    max-width: 1110px;
+    padding: 0rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,11 +30,13 @@ const StyledNavBar = styled.nav`
         background: ${theme.lightBlue};
       }
     }
+
+    @media (max-width: 768px) {
+    max-width: 768px;
+  }
   }
 
-  @media (max-width: 768px) {
-    width: 19.5rem;
-  }
+  
 `;
 
 function NavBar() {
