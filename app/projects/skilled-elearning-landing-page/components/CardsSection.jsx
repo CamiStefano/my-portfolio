@@ -37,11 +37,31 @@ function CardsSection() {
       <div className="box-1">
         <p>Check out our most popular courses!</p>
       </div>
-      <Cards icon={<AnimationSVG />} subtitle="Animation" label="Learn the latest animation techniques to create stunning motion design and captivate your audience." />
-      <Cards icon={<DesignSVG />} subtitle="Design" label="Create beautiful, usable interfaces to help shape the future of how the web looks. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
-      <Cards icon={<PhotographySVG />} subtitle="Photography" label="Explore critical fundamentals like lighting, composition, and focus to capture exceptional photos." />
-      <Cards icon={<CryptoSVG />} subtitle="Crypto" label="All you need to know to get started investing in crypto. Go from beginner to advanced with this 54 hour course." />
-      <Cards icon={<BusinessSVG />} subtitle="Business" label="A step-by-step playbook to help you start, scale, and sustain your business without outside investment." />
+      <Cards
+        icon={<AnimationSVG />}
+        subtitle="Animation"
+        label="Learn the latest animation techniques to create stunning motion design and captivate your audience."
+      />
+      <Cards
+        icon={<DesignSVG />}
+        subtitle="Design"
+        label="Create beautiful, usable interfaces to help shape the future of how the web looks. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+      />
+      <Cards
+        icon={<PhotographySVG />}
+        subtitle="Photography"
+        label="Explore critical fundamentals like lighting, composition, and focus to capture exceptional photos."
+      />
+      <Cards
+        icon={<CryptoSVG />}
+        subtitle="Crypto"
+        label="All you need to know to get started investing in crypto. Go from beginner to advanced with this 54 hour course."
+      />
+      <Cards
+        icon={<BusinessSVG />}
+        subtitle="Business"
+        label="A step-by-step playbook to help you start, scale, and sustain your business without outside investment."
+      />
     </StyledCardsSection>
   );
 }

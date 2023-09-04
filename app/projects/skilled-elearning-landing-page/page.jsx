@@ -8,7 +8,7 @@ import Hero from './components/Hero';
 import CardsSection from './components/CardsSection';
 
 export const PluaJacartaSans = plusJacartaSans({
-  weight: ['400', '700'],
+  weight: ['400', '700', '800'],
   style: ['normal'],
   subsets: ['latin'],
 });
