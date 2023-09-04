@@ -7,30 +7,54 @@ import { theme, Title, Paragraph } from '../styles';
 import Button from './Button';
 
 const StyledHero = styled.section`
-      display: flex;
-      padding: 7rem 2rem 0rem;
-      height: 42rem;
+  display: flex;
+  padding: 7rem 2rem 0rem;
+  height: 42rem;
 
-      & .main__section__text {
-        display: flex;
-        flex-direction: column;
-        width: 29rem;
-      }
+  & .main__section__text {
+    display: flex;
+    flex-direction: column;
+    width: 29rem;
+  }
 
-      & .main__section__image {
-      position: absolute;
-      top: 0;
-      right: 0;
+  & .main__section__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  & .desktop_image {
+    display: block;
+
+    @media only screen and (max-width: 1280px) {
+      display: none;
     }
+  }
 
-    & .button {
-      background: ${theme.gradient1};
-      transition: all 0.4s ease;
+  & .tablet_image {
+    display: none;
 
-      &:hover {
-        background: ${theme.gradient1hover};
-      }
+    @media only screen and (min-width: 376px) and (max-width: 1279px) {
+      display: block;
     }
+  }
+
+  & .mobile_image {
+    display: none;
+
+    @media only screen and (max-width: 375px) {
+      display: block;
+    }
+  }
+
+  & .button {
+    background: ${theme.gradient1};
+    transition: all 0.4s ease;
+
+    &:hover {
+      background: ${theme.gradient1hover};
+    }
+  }
 `;
 
 function Hero() {
@@ -46,9 +70,26 @@ function Hero() {
       </div>
       <div className="main__section__image">
         <Image
-          src="/person.png"
+          className="desktop_image"
+          src="/image-hero-desktop.png"
           width={710}
           height={791}
+          alt="Picture of a person drinking coffee"
+        />
+
+        <Image
+          className="tablet_image"
+          src="/image-hero-tablet.png"
+          width={397}
+          height={630}
+          alt="Picture of a person drinking coffee"
+        />
+
+        <Image
+          className="mobile_image"
+          src="/image-hero-mobile.png"
+          width={375}
+          height={409}
           alt="Picture of a person drinking coffee"
         />
       </div>

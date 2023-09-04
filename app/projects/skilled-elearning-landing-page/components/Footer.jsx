@@ -22,6 +22,10 @@ const StyledFooter = styled.footer`
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: 1280px) {
+      max-width: 768px;
+    }
+
     & .button {
       background: ${theme.gradient2};
       transition: all 0.4s ease;

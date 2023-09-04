@@ -22,6 +22,10 @@ const StyledNavBar = styled.nav`
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: 1280px) {
+      max-width: 768px;
+    }
+
     & .button {
       background: ${theme.dark};
       transition: all 0.4s ease;
@@ -32,11 +36,9 @@ const StyledNavBar = styled.nav`
     }
 
     @media (max-width: 768px) {
-    max-width: 768px;
+      max-width: 768px;
+    }
   }
-  }
-
-  
 `;
 
 function NavBar() {

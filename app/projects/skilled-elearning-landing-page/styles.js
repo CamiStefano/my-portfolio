@@ -31,6 +31,9 @@ export const Wrapper = styled.section`
     width: 100%;
     max-width: 1110px;
 
+    @media (max-width: 1280px) {
+      max-width: 768px;
+    }
   }
 `;
 
