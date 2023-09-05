@@ -17,7 +17,6 @@ const StyledNavBar = styled.nav`
 
   & .container {
     max-width: 1110px;
-    padding: 0rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

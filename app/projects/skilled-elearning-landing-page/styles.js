@@ -26,6 +26,7 @@ export const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   background: ${theme.gradient3};
+  padding: 0rem 2rem;
 
   & .container {
     width: 100%;
@@ -41,25 +42,25 @@ export const Title = styled.h1`
   font-size: 3.5rem;
   line-height: normal;
   font-weight: 800;
+  color: ${theme.dark};
 
-  @media (max-width: 768px) {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    padding-top: 1.5rem;
+  @media (max-width: 820px) {
+    font-size: 2.5rem;
   }
 `;
 
 export const Paragraph = styled.p`
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 500;
   color: ${theme.grey};
   padding: 1.81rem 0rem 2.5rem;
-  max-width: 24rem;
+  max-width: 28rem;
 
-  @media (max-width: 768px) {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+  @media (max-width: 820px) {
+    font-size: 1rem;
+    line-height: 1.625rem;
     padding-top: 1.5rem;
+    max-width: 24rem;
   }
 `;

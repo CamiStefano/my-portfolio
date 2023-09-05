@@ -13,11 +13,11 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0rem 2.5rem;
 
   & .container {
     width: 100%;
     max-width: 1110px;
-    padding: 0rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,10 +34,6 @@ const StyledFooter = styled.footer`
         background: ${theme.gradient2hover};
       }
     }
-  }
-
-  @media (max-width: 768px) {
-    width: 19.5rem;
   }
 
   & .title {

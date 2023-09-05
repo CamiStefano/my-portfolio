@@ -8,10 +8,14 @@ import { AnimationSVG, DesignSVG, PhotographySVG, CryptoSVG, BusinessSVG } from 
 
 const StyledCardsSection = styled.section`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.8rem;
-  padding: 0rem 2rem 7rem;
+  padding: 0rem 0rem 7rem;
+
+  @media (max-width: 820px) {
+    gap: 0.7rem;
+  }
 
   & .box-1 {
     width: 20rem;
@@ -21,12 +25,23 @@ const StyledCardsSection = styled.section`
     padding: 4rem 2rem 8rem;
     margin-top: 3rem;
 
+    @media (max-width: 820px) {
+      width: 21rem;
+      height: 16rem;
+      padding: 3.5rem 2rem 8rem;
+    }
+
     & p {
       color: ${theme.light};
       font-size: 2rem;
       font-style: normal;
       font-weight: 800;
       line-height: 2.5rem;
+
+      @media (max-width: 820px) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
     }
   }
 `;

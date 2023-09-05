@@ -19,6 +19,13 @@ const StyledCard = styled.div`
   position: relative;
   margin-top: 3rem;
 
+  @media (max-width: 820px) {
+    gap: 1rem;
+    width: 21rem;
+    height: 16rem;
+    padding: 3.5rem 1.2rem 2rem 2rem;
+  }
+
   & .img {
     position: absolute;
     top: -1.5rem;
@@ -30,6 +37,11 @@ const StyledCard = styled.div`
     font-style: normal;
     font-weight: 800;
     line-height: 2rem;
+
+    @media (max-width: 820px) {
+      font-size: 1.25rem;
+      line-height: normal;
+    }
   }
 
   & .label {
@@ -38,6 +50,11 @@ const StyledCard = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: 1.75rem;
+
+    @media (max-width: 820px) {
+      font-size: 1rem;
+      line-height: 1.625rem;
+    }
   }
 
   & .link {

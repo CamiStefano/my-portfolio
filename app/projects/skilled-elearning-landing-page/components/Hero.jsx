@@ -8,13 +8,22 @@ import Button from './Button';
 
 const StyledHero = styled.section`
   display: flex;
-  padding: 7rem 2rem 0rem;
+  padding: 7rem 0rem 0rem;
   height: 42rem;
+
+  @media (max-width: 1280px) {
+    padding: 6rem 0rem 0rem;
+    height: 36rem;
+  }
 
   & .main__section__text {
     display: flex;
     flex-direction: column;
     width: 29rem;
+
+    @media (max-width: 820px) {
+      max-width: 28rem;
+    }
   }
 
   & .main__section__image {
