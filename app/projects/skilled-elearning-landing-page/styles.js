@@ -28,6 +28,11 @@ export const Wrapper = styled.section`
   background: ${theme.gradient3};
   padding: 0rem 2rem;
 
+  ::selection {
+    background: ${theme.pink};
+    color: ${theme.light};
+  }
+
   & .container {
     width: 100%;
     max-width: 1110px;
