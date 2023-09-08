@@ -32,8 +32,12 @@ export const Wrapper = styled.section`
     width: 100%;
     max-width: 1110px;
 
-    @media (max-width: 1280px) {
+    @media only screen and (min-width: 765px) and (max-width: 1279px) {
       max-width: 768px;
+    }
+
+    @media (max-width: 764px) {
+      max-width: 343px;
     }
   }
 `;
@@ -60,7 +64,7 @@ export const Paragraph = styled.p`
   @media (max-width: 820px) {
     font-size: 1rem;
     line-height: 1.625rem;
-    padding-top: 1.5rem;
+    padding: 1.5rem 0rem;
     max-width: 24rem;
   }
 `;

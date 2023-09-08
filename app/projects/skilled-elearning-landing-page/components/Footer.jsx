@@ -22,8 +22,12 @@ const StyledFooter = styled.footer`
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: 1280px) {
+    @media only screen and (max-width: 1279px) {
       max-width: 768px;
+    }
+
+    @media only screen and (max-width: 764px) {
+      width: 343px;
     }
 
     & .button {

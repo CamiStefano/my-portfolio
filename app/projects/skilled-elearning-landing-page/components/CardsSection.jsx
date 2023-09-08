@@ -11,10 +11,12 @@ const StyledCardsSection = styled.section`
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.8rem;
-  padding: 0rem 0rem 7rem;
+  padding: 1rem 0rem 7rem;
 
   @media (max-width: 820px) {
     gap: 0.7rem;
+    justify-content: center;
+    padding: 0rem 0rem 6rem;
   }
 
   & .box-1 {
@@ -29,6 +31,12 @@ const StyledCardsSection = styled.section`
       width: 21rem;
       height: 16rem;
       padding: 3.5rem 2rem 8rem;
+    }
+
+    @media (max-width: 764px) {
+      height: 7.5rem;
+      padding: 1.5rem 1.7rem;
+      margin-top: 0;
     }
 
     & p {

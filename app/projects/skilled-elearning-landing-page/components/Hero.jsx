@@ -11,18 +11,17 @@ const StyledHero = styled.section`
   padding: 7rem 0rem 0rem;
   height: 42rem;
 
-  @media (max-width: 1280px) {
-    padding: 6rem 0rem 0rem;
-    height: 36rem;
-  }
-
   & .main__section__text {
     display: flex;
     flex-direction: column;
-    width: 29rem;
+    max-width: 29rem;
 
-    @media (max-width: 820px) {
+    @media only screen and (max-width: 820px) {
       max-width: 28rem;
+    }
+
+    @media only screen and (max-width: 764px) {
+      padding-bottom: 2.8rem;
     }
   }
 
@@ -30,6 +29,11 @@ const StyledHero = styled.section`
     position: absolute;
     top: 0;
     right: 0;
+
+    @media only screen and (max-width: 764px) {
+      display: flex;
+      position: static;
+    }
   }
 
   & .desktop_image {
@@ -43,7 +47,7 @@ const StyledHero = styled.section`
   & .tablet_image {
     display: none;
 
-    @media only screen and (min-width: 376px) and (max-width: 1279px) {
+    @media only screen and (min-width: 765px) and (max-width: 1280px) {
       display: block;
     }
   }
@@ -51,7 +55,7 @@ const StyledHero = styled.section`
   & .mobile_image {
     display: none;
 
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 764px) {
       display: block;
     }
   }
@@ -63,6 +67,18 @@ const StyledHero = styled.section`
     &:hover {
       background: ${theme.gradient1hover};
     }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    padding: 4rem 0rem 0rem;
+    height: 32rem;
+  }
+
+  @media only screen and (max-width: 764px) {
+    padding: 1rem 0rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
   }
 `;
 
