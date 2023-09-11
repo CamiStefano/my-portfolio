@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { styled } from 'styled-components';
-import { theme, Title, Paragraph } from '../styles';
+import { theme, Title, Paragraph, Container } from '../styles';
 import Button from './Button';
 
 const StyledHero = styled.section`
@@ -84,42 +84,44 @@ const StyledHero = styled.section`
 
 function Hero() {
   return (
-    <StyledHero className="container">
-      <div className="main__section__text">
-        <Title>Maximize skill, minimize budget</Title>
-        <Paragraph>
-          Our modern courses across a range of in-demand skills will give you the knowledge you need
-          to live the life you want.
-        </Paragraph>
-        <Button className="button">Get Started</Button>
-      </div>
-      <div className="main__section__image">
-        <Image
-          className="desktop_image"
-          src="/image-hero-desktop.png"
-          width={710}
-          height={791}
-          alt="Picture of a person drinking coffee"
-          priority={true}
-        />
+    <Container>
+      <StyledHero>
+        <div className="main__section__text">
+          <Title>Maximize skill, minimize budget</Title>
+          <Paragraph>
+            Our modern courses across a range of in-demand skills will give you the knowledge you
+            need to live the life you want.
+          </Paragraph>
+          <Button className="button">Get Started</Button>
+        </div>
+        <div className="main__section__image">
+          <Image
+            className="desktop_image"
+            src="/image-hero-desktop.png"
+            width={710}
+            height={791}
+            alt="Picture of a person drinking coffee"
+            priority
+          />
 
-        <Image
-          className="tablet_image"
-          src="/image-hero-tablet.png"
-          width={397}
-          height={630}
-          alt="Picture of a person drinking coffee"
-        />
+          <Image
+            className="tablet_image"
+            src="/image-hero-tablet.png"
+            width={397}
+            height={630}
+            alt="Picture of a person drinking coffee"
+          />
 
-        <Image
-          className="mobile_image"
-          src="/image-hero-mobile.png"
-          width={375}
-          height={409}
-          alt="Picture of a person drinking coffee"
-        />
-      </div>
-    </StyledHero>
+          <Image
+            className="mobile_image"
+            src="/image-hero-mobile.png"
+            width={375}
+            height={409}
+            alt="Picture of a person drinking coffee"
+          />
+        </div>
+      </StyledHero>
+    </Container>
   );
 }
 

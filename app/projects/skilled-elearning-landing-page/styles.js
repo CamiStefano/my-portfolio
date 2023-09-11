@@ -49,9 +49,8 @@ export const Wrapper = styled.section`
 
 export const Container = styled.div`
   max-width: 1110px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  margin: 0 auto;
 
   @media only screen and (min-width: 765px) and (max-width: 1279px) {
     max-width: 768px;

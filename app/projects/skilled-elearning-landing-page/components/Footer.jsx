@@ -2,40 +2,27 @@
 
 import React from 'react';
 import { styled } from 'styled-components';
-import { theme } from '../styles';
+import { Container, theme } from '../styles';
 import { LogoLight } from '../icons';
 import Button from './Button';
 
-const StyledFooter = styled.footer`
+const Background = styled.footer`
   width: 100%;
-  height: 7.5rem;
   background-color: ${theme.dark};
+`;
+
+const StyledFooter = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  height: 7.5rem;
   padding: 0rem 2.5rem;
 
-  & .container {
-    width: 100%;
-    max-width: 1110px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  & button {
+    background: ${theme.gradient2};
 
-    @media only screen and (max-width: 1279px) {
-      max-width: 768px;
-    }
-
-    @media only screen and (max-width: 764px) {
-      width: 343px;
-    }
-
-    & button {
-      background: ${theme.gradient2};
-
-      &:hover {
-        background: ${theme.gradient2hover};
-      }
+    &:hover {
+      background: ${theme.gradient2hover};
     }
   }
 
@@ -51,13 +38,14 @@ const StyledFooter = styled.footer`
 
 function Footer() {
   return (
-    <StyledFooter className="footer">
-      <div className="container">
-        <LogoLight />
-
-        <Button>Get Started</Button>
-      </div>
-    </StyledFooter>
+    <Background>
+      <Container>
+        <StyledFooter>
+          <LogoLight />
+          <Button>Get Started</Button>
+        </StyledFooter>
+      </Container>
+    </Background>
   );
 }
 

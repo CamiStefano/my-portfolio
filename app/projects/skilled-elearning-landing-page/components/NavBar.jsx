@@ -2,57 +2,42 @@
 
 import React from 'react';
 import { styled } from 'styled-components';
-import { theme } from '../styles';
+import { Container, theme } from '../styles';
 import { LogoDark } from '../icons';
 import Button from './Button';
 
 const StyledNavBar = styled.nav`
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 7rem;
   background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
+  z-index: 10;
 
-  & .container {
-    max-width: 1110px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  & button {
+    background: ${theme.dark};
+    transition: all 0.4s ease;
 
-    @media only screen and (max-width: 1279px) {
-      max-width: 768px;
+    &:hover {
+      background: ${theme.lightBlue};
     }
+  }
 
-    @media only screen and (max-width: 764px) {
-      width: 343px;
-    }
-
-    & .button {
-      background: ${theme.dark};
-      transition: all 0.4s ease;
-
-      &:hover {
-        background: ${theme.lightBlue};
-      }
-    }
-
-    @media (max-width: 768px) {
-      max-width: 768px;
-    }
+  @media (max-width: 768px) {
+    max-width: 768px;
   }
 `;
 
 function NavBar() {
   return (
-    <StyledNavBar className="navbar">
-      <div className="container">
+    <Container>
+      <StyledNavBar>
         <LogoDark />
-
-        <Button className="button">Get Started</Button>
-      </div>
-    </StyledNavBar>
+        <Button>Get Started</Button>
+      </StyledNavBar>
+    </Container>
   );
 }
 

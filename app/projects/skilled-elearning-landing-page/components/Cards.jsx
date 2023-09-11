@@ -1,7 +1,5 @@
 'use client';
 
-/* eslint-disable max-len */
-
 import Link from 'next/link';
 import React from 'react';
 import { styled } from 'styled-components';
@@ -50,6 +48,7 @@ const StyledCard = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: 1.75rem;
+    flex-grow: 1;
 
     @media (max-width: 820px) {
       font-size: 1rem;

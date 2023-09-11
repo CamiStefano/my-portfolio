@@ -68,7 +68,7 @@ function CardsSection() {
       <Cards
         icon={<DesignSVG />}
         subtitle="Design"
-        label="Create beautiful, usable interfaces to help shape the future of how the web looks. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+        label="Create beautiful, usable interfaces to help shape the future of how the web looks."
       />
       <Cards
         icon={<PhotographySVG />}
