@@ -30,9 +30,8 @@ const StyledFooter = styled.footer`
       width: 343px;
     }
 
-    & .button {
+    & button {
       background: ${theme.gradient2};
-      transition: all 0.4s ease;
 
       &:hover {
         background: ${theme.gradient2hover};
@@ -56,7 +55,7 @@ function Footer() {
       <div className="container">
         <LogoLight />
 
-        <Button className="button">Get Started</Button>
+        <Button>Get Started</Button>
       </div>
     </StyledFooter>
   );

@@ -100,6 +100,7 @@ function Hero() {
           width={710}
           height={791}
           alt="Picture of a person drinking coffee"
+          priority={true}
         />
 
         <Image

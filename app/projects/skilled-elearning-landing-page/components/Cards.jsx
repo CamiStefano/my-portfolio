@@ -72,7 +72,7 @@ const StyledCard = styled.div`
 
 function Cards({ icon, subtitle, label }) {
   return (
-    <StyledCard className="boxes">
+    <StyledCard>
       <span className="img">{icon}</span>
       <h2 className="subtitle">{subtitle}</h2>
       <p className="label">{label}</p>
