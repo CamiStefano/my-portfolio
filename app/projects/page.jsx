@@ -20,6 +20,9 @@ export default function Projects() {
               Skilled e-learning landing page
             </Link>
           </li>
+          <li>
+            <Link href="/projects/github-user-search-app">GitHub user search App</Link>
+          </li>
         </ul>
       </div>
     </section>
