@@ -11,6 +11,7 @@ export const theme = {
   primaryDark: '#2B3442',
   secondaryDark: '#141D2F',
   tertiaryDark: '#1E2A47',
+  dark: '#222731',
 };
 
 export const Wrapper = styled.section`
@@ -19,4 +20,21 @@ export const Wrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  color: ${theme.tertiaryDark};
+`;
+
+export const Container = styled.div`
+  max-width: 730px;
+  width: 100%;
+  margin: 0 auto;
+  background: ${theme.white};
+
+  @media only screen and (min-width: 326px) and (max-width: 729px) {
+    max-width: 768px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 327px;
+  }
 `;

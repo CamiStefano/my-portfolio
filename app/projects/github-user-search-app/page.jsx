@@ -1,12 +1,11 @@
 'use client';
 
 import React from 'react';
-import { useState } from 'react';
-
 import { Space_Mono as spaceMono } from 'next/font/google';
 import { ThemeProvider } from 'styled-components';
-import { Splash } from './components/SplashScreen';
 import { Wrapper } from './styles';
+import NavBar from './components/NavBar';
+import SearchBar from './components/SearchBar';
 
 export const SpaceMono = spaceMono({
   weight: ['400', '700'],
@@ -34,13 +33,13 @@ export const metadata = {
 };
 
 export default function GitHubSearch() {
-  const [theme, setTheme] = useState('light');
   return (
-    <ThemeProvider theme={themes}>
-      <Wrapper className={SpaceMono.className}>
-        <Splash theme={theme} setTheme={setTheme} />
-        <h1>sjaksja</h1>
-      </Wrapper>
-    </ThemeProvider>
+    <Wrapper className={SpaceMono.className}>
+      <ThemeProvider theme={themes}>
+        <NavBar />
+        <SearchBar />
+        <h1>lalalala</h1>
+      </ThemeProvider>
+    </Wrapper>
   );
 }
