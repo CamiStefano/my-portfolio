@@ -4,18 +4,26 @@ import React from 'react';
 import { styled } from 'styled-components';
 import { CgSearch } from 'react-icons/cg';
 import { Container, theme } from '../styles';
+import Button from './Button';
 
-const StyledSeachBar = styled.nav`
+const StyledSearchContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 7rem;
   background-color: transparent;
+  border-radius: 0.9375rem;
+  background: #fefefe;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
   z-index: 10;
+  padding: 1rem 0.5rem;
 
   & h1 {
     color: ${theme.dark};
+  }
+  & .colorImg {
+    color: #0079ff;
   }
 
   @media (max-width: 768px) {
@@ -23,19 +31,17 @@ const StyledSeachBar = styled.nav`
   }
 `;
 
-function SearchBar() {
+function SearchContainer() {
   return (
     <Container>
-      <StyledSeachBar>
+      <StyledSearchContainer>
         <div>
-          <CgSearch size={24} />
+          <CgSearch size={24} className="colorImg" />
         </div>
-        <form>
-          <input type="submit" id="button" value="Search" placeholder="Search GitHub username…" />
-        </form>
-      </StyledSeachBar>
+        <Button>Search</Button>
+      </StyledSearchContainer>
     </Container>
   );
 }
 
-export default SearchBar;
+export default SearchContainer;

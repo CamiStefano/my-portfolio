@@ -22,6 +22,7 @@ export const Wrapper = styled.section`
   align-items: center;
   flex-direction: column;
   color: ${theme.tertiaryDark};
+  background-color: ${theme.secondaryLight};
 `;
 
 export const Container = styled.div`

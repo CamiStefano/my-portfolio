@@ -5,7 +5,7 @@ import { Space_Mono as spaceMono } from 'next/font/google';
 import { ThemeProvider } from 'styled-components';
 import { Wrapper } from './styles';
 import NavBar from './components/NavBar';
-import SearchBar from './components/SearchBar';
+import SearchContainer from './components/SearchBar';
 
 export const SpaceMono = spaceMono({
   weight: ['400', '700'],
@@ -37,7 +37,7 @@ export default function GitHubSearch() {
     <Wrapper className={SpaceMono.className}>
       <ThemeProvider theme={themes}>
         <NavBar />
-        <SearchBar />
+        <SearchContainer />
         <h1>lalalala</h1>
       </ThemeProvider>
     </Wrapper>
