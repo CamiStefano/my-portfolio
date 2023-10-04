@@ -6,6 +6,7 @@ import { styled } from 'styled-components';
 import { HiLocationMarker, HiLink } from 'react-icons/hi';
 import { FaXTwitter } from 'react-icons/fa6';
 import { BsBuildingsFill } from 'react-icons/bs';
+import StatCard from './StatCard';
 import { Container, theme } from '../styles';
 
 const StyledUserCardContainer = styled.section`
@@ -20,13 +21,23 @@ const StyledUserCardContainer = styled.section`
   display: flex;
   background-color: ${theme.white};
   margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  & .avatarContainer {
+    display: flex;
+  }
+
+  & .dataContainer {
+    display: flex;
+  }
 `;
 
 function UserCardContainer() {
   return (
     <Container>
       <StyledUserCardContainer>
-        <div>
+        <div className="avatarContainer">
           <Image
             className="gitHubAvatar"
             src="/gitHubAvatar.png"
@@ -34,28 +45,18 @@ function UserCardContainer() {
             height={117}
             alt="GitHub Avatar"
           />
-        </div>
-        <div>
           <div>
-            <p>
-              <span>The Octocat</span>
-              <span>Joined 25 Jan 2011</span>
-            </p>
+            <p>The Octocat</p>
             <p>@octocat</p>
-            <p>This profile has no bio</p>
           </div>
           <div>
+            <p>Joined 25 Jan 2011</p>
+          </div>
+        </div>
+        <div className="dataContainer">
+          <div>
             <div>
-              <p>Repos</p>
-              <p>8</p>
-            </div>
-            <div>
-              <p>Followers</p>
-              <p>3938</p>
-            </div>
-            <div>
-              <p>Following</p>
-              <p>9</p>
+              <p>This profile has no bio</p>
             </div>
           </div>
           <div>
@@ -85,6 +86,7 @@ function UserCardContainer() {
             </div>
           </div>
         </div>
+        <StatCard />
       </StyledUserCardContainer>
     </Container>
   );
