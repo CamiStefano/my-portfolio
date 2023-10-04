@@ -5,6 +5,7 @@ import { Space_Mono as spaceMono } from 'next/font/google';
 import { ThemeProvider } from 'styled-components';
 import { Wrapper } from './styles';
 import NavBar from './components/NavBar';
+import UserCard from './components/UserCard';
 import SearchContainer from './components/SearchBar';
 
 export const SpaceMono = spaceMono({
@@ -38,7 +39,7 @@ export default function GitHubSearch() {
       <ThemeProvider theme={themes}>
         <NavBar />
         <SearchContainer />
-        <h1>lalalala</h1>
+        <UserCard />
       </ThemeProvider>
     </Wrapper>
   );
