@@ -3,9 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { styled } from 'styled-components';
-import { HiLocationMarker, HiLink } from 'react-icons/hi';
-import { FaXTwitter } from 'react-icons/fa6';
-import { BsBuildingsFill } from 'react-icons/bs';
 import StatCard from './StatCard';
 import { Container, theme } from '../styles';
 
@@ -24,12 +21,59 @@ const StyledUserCardContainer = styled.section`
   display: flex;
   flex-direction: column;
 
-  & .avatarContainer {
+  & .profileContainer {
     display: flex;
+    flex: 0 0;
+
+    & .gitHubAvatar {
+      margin-right: 2.3rem;
+    }
+
+    & .gitHubUser {
+      flex: 1 1;
+
+      h1 {
+        font-size: 1.625rem;
+        line-height: 2.4375rem;
+        font-weight: 700;
+        color: ${theme.primaryDark};
+      }
+      a {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #0079ff;
+        transition: all 0.4s ease;
+
+        &:hover {
+          color: #60abff;
+        }
+
+        &:active {
+          color: #60abff;
+        }
+      }
+    }
+
+    & .gitHubUserJoined {
+      p {
+        color: ${theme.tertiaryLight};
+        font-size: 0.9375rem;
+      }
+    }
   }
 
   & .dataContainer {
     display: flex;
+    margin-top: -2rem;
+    margin-left: 9.62rem;
+    min-height: 3.125rem;
+
+    h3 {
+      font-size: 0.9375rem;
+      font-weight: 400;
+      line-height: 1.5625rem;
+      color: ${theme.lightBlue};
+    }
   }
 `;
 
@@ -37,7 +81,7 @@ function UserCardContainer() {
   return (
     <Container>
       <StyledUserCardContainer>
-        <div className="avatarContainer">
+        <div className="profileContainer">
           <Image
             className="gitHubAvatar"
             src="/gitHubAvatar.png"
@@ -45,44 +89,23 @@ function UserCardContainer() {
             height={117}
             alt="GitHub Avatar"
           />
-          <div>
-            <p>The Octocat</p>
-            <p>@octocat</p>
+          <div className="gitHubUser">
+            <h1>The Octocat</h1>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              @octocat
+            </a>
           </div>
-          <div>
+          <div className="gitHubUserJoined">
             <p>Joined 25 Jan 2011</p>
           </div>
         </div>
         <div className="dataContainer">
           <div>
             <div>
-              <p>This profile has no bio</p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <p>
-                <HiLocationMarker />
-                San Francisco
-              </p>
-            </div>
-            <div>
-              <p>
-                <FaXTwitter />
-                Not Available
-              </p>
-            </div>
-            <div>
-              <p>
-                <HiLink />
-                <a href="https://github.blog">https://github.blog</a>
-              </p>
-            </div>
-            <div>
-              <p>
-                <BsBuildingsFill />
-                <a href="http://www.github.com/github">@github</a>
-              </p>
+              <h3>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque
+                volutpat mattis eros.
+              </h3>
             </div>
           </div>
         </div>

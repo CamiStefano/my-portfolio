@@ -2,10 +2,28 @@
 
 import React from 'react';
 import { styled } from 'styled-components';
-import { Container } from '../styles';
+import { Container, theme } from '../styles';
 
 const StyledStatCardContainer = styled.div`
-  min-width: 4.5rem;
+  max-width: 30rem;
+  display: flex;
+  margin-left: 9.62rem;
+  margin-top: 2rem;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+
+  div > h4 {
+    color: ${theme.lightBlue};
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+  div > p {
+    color: ${theme.primaryDark};
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 700;
+  }
 
   @media (max-width: 768px) {
     margin-top: 0.5rem;
@@ -17,18 +35,16 @@ function StatCardContainer() {
     <Container>
       <StyledStatCardContainer>
         <div>
-          <div>
-            <p>Repos</p>
-            <p>8</p>
-          </div>
-          <div>
-            <p>Followers</p>
-            <p>3938</p>
-          </div>
-          <div>
-            <p>Following</p>
-            <p>9</p>
-          </div>
+          <h4>Repos</h4>
+          <p>8</p>
+        </div>
+        <div>
+          <h4>Followers</h4>
+          <p>3938</p>
+        </div>
+        <div>
+          <h4>Following</h4>
+          <p>9</p>
         </div>
       </StyledStatCardContainer>
     </Container>
