@@ -29,7 +29,6 @@ export const Container = styled.div`
   max-width: 730px;
   width: 100%;
   margin: 0 auto;
-  background: ${theme.white};
 
   @media only screen and (min-width: 326px) and (max-width: 729px) {
     max-width: 768px;

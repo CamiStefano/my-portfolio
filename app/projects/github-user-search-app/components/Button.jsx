@@ -14,6 +14,7 @@ const Button = styled.button`
   font-weight: 700;
   cursor: pointer;
   transition: all 0.4s ease;
+  font-family: inherit;
 
   &:hover {
     background: #60abff;

@@ -7,6 +7,7 @@ import { HiMoon } from 'react-icons/hi';
 import { Container, theme } from '../styles';
 
 const StyledNavBar = styled.nav`
+  font-family: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
