@@ -1,7 +1,6 @@
 'use client';
 
 import { styled } from 'styled-components';
-import { theme } from '../styles';
 
 const Button = styled.button`
   width: 6.625rem;
@@ -9,7 +8,7 @@ const Button = styled.button`
   border-radius: 0.625rem;
   border: none;
   background: #0079ff;
-  color: ${theme.white};
+  color: ${({ theme }) => theme.white};
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;

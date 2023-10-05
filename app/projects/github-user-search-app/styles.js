@@ -2,18 +2,6 @@
 
 import { styled } from 'styled-components';
 
-export const theme = {
-  white: '#FFFFFF',
-  primaryLight: '#FEFEFE',
-  secondaryLight: '#F6F8FF',
-  tertiaryLight: '#697C9A',
-  lightBlue: '#4B6A9B',
-  primaryDark: '#2B3442',
-  secondaryDark: '#141D2F',
-  tertiaryDark: '#1E2A47',
-  dark: '#222731',
-};
-
 export const Wrapper = styled.section`
   width: 100%;
   height: 100vh;
@@ -21,8 +9,8 @@ export const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: ${theme.tertiaryDark};
-  background-color: ${theme.secondaryLight};
+  color: ${({ theme }) => theme.tertiaryDark};
+  background: ${({ theme }) => theme.pageBackground};
 `;
 
 export const Container = styled.div`

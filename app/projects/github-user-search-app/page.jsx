@@ -1,9 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Space_Mono as spaceMono } from 'next/font/google';
 import { ThemeProvider } from 'styled-components';
 import { Wrapper } from './styles';
+import { darkTheme, lightTheme } from './theme';
 import NavBar from './components/NavBar';
 import UserCard from './components/UserCard';
 import SearchContainer from './components/SearchBar';
@@ -15,34 +16,22 @@ export const SpaceMono = spaceMono({
   subsets: ['latin'],
 });
 
-export const LightTheme = {
-  pageBackground: '#FEFEFE',
-  titleColor: '#2B3442',
-};
-
-export const DarkTheme = {
-  pageBackground: '#1E2A47',
-  titleColor: '#FFFFFF',
-};
-
-const themes = {
-  light: LightTheme,
-  dark: DarkTheme,
-};
-
 export const metadata = {
   title: 'GitHub user search App',
 };
 
 export default function GitHubSearch() {
+  const [theme, setTheme] = useState('light');
+
+  const selectedTheme = theme === 'light' ? lightTheme : darkTheme;
   return (
-    <Wrapper className={SpaceMono.className}>
-      <ThemeProvider theme={themes}>
-        <NavBar />
+    <ThemeProvider theme={selectedTheme}>
+      <Wrapper className={SpaceMono.className}>
+        <NavBar theme={theme} setTheme={setTheme} />
         <SearchContainer />
         <UserCard />
         <SocialCardContainer />
-      </ThemeProvider>
-    </Wrapper>
+      </Wrapper>
+    </ThemeProvider>
   );
 }

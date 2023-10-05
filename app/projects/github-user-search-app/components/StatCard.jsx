@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { styled } from 'styled-components';
-import { Container, theme } from '../styles';
+import { Container } from '../styles';
 
 const StyledStatCardContainer = styled.div`
   max-width: 30rem;
@@ -11,15 +11,14 @@ const StyledStatCardContainer = styled.div`
   margin-top: 2rem;
   justify-content: space-between;
   padding: 0rem 2rem;
-
-  div > h4 {
-    color: ${theme.lightBlue};
+  background: div > h4 {
+    color: ${({ theme }) => theme.lightBlue};
     font-size: 0.8125rem;
     font-style: normal;
     font-weight: 400;
   }
   div > p {
-    color: ${theme.primaryDark};
+    color: ${({ theme }) => theme.primaryDark};
     font-size: 1.375rem;
     font-style: normal;
     font-weight: 700;

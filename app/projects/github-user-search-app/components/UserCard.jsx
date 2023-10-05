@@ -4,19 +4,18 @@ import React from 'react';
 import Image from 'next/image';
 import { styled } from 'styled-components';
 import StatCard from './StatCard';
-import { Container, theme } from '../styles';
+import { Container } from '../styles';
 
 const StyledUserCardContainer = styled.section`
   width: 100%;
   min-height: 26.1875rem;
   height: 100%;
   border-radius: 0.9375rem;
-  background: #fefefe;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
   padding: 3rem;
   font-family: inherit;
   display: flex;
-  background-color: ${theme.white};
+  background: ${({ theme }) => theme.background};
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -36,7 +35,7 @@ const StyledUserCardContainer = styled.section`
         font-size: 1.625rem;
         line-height: 2.4375rem;
         font-weight: 700;
-        color: ${theme.primaryDark};
+        color: ${({ theme }) => theme.primaryDark};
       }
       a {
         font-size: 1rem;
@@ -56,7 +55,7 @@ const StyledUserCardContainer = styled.section`
 
     & .gitHubUserJoined {
       p {
-        color: ${theme.tertiaryLight};
+        color: ${({ theme }) => theme.tertiaryLight};
         font-size: 0.9375rem;
       }
     }
@@ -66,13 +65,12 @@ const StyledUserCardContainer = styled.section`
     display: flex;
     margin-top: -2rem;
     margin-left: 9.62rem;
-    min-height: 3.125rem;
 
     h3 {
       font-size: 0.9375rem;
       font-weight: 400;
       line-height: 1.5625rem;
-      color: ${theme.lightBlue};
+      color: &;
     }
   }
 `;
@@ -88,6 +86,7 @@ function UserCardContainer() {
             width={117}
             height={117}
             alt="GitHub Avatar"
+            priority
           />
           <div className="gitHubUser">
             <h1>The Octocat</h1>
@@ -102,10 +101,7 @@ function UserCardContainer() {
         <div className="dataContainer">
           <div>
             <div>
-              <h3>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque
-                volutpat mattis eros.
-              </h3>
+              <h3>This profile has no bio</h3>
             </div>
           </div>
         </div>

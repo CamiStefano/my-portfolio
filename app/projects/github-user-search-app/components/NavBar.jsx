@@ -4,7 +4,7 @@ import React from 'react';
 import { styled } from 'styled-components';
 // import { CgSun } from 'react-icons/cg';
 import { HiMoon } from 'react-icons/hi';
-import { Container, theme } from '../styles';
+import { Container } from '../styles';
 
 const StyledNavBar = styled.nav`
   font-family: inherit;
@@ -13,15 +13,23 @@ const StyledNavBar = styled.nav`
   align-items: center;
   width: 100%;
   height: 4.3125rem;
-  background-color: transparent;
-  color: #697c9a;
+  background: transparent;
+  color: ${({ theme }) => theme.tertiaryLight};
   z-index: 10;
 
   & h1 {
-    color: ${theme.dark};
+    color: ${({ theme }) => theme.dark};
   }
 
-  & div {
+  & button {
+    border: none;
+    background: transparent;
+    color: ${({ theme }) => theme.tertiaryLight};
+    font-size: 0.8125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-family: inherit;
     display: flex;
 
     & span {
@@ -35,15 +43,15 @@ const StyledNavBar = styled.nav`
   }
 `;
 
-function NavBar() {
+function NavBar({ theme, setTheme }) {
   return (
     <Container>
       <StyledNavBar>
         <h1>devfinder</h1>
-        <div>
-          <span>DARK </span>
+        <button type="button" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+          <span>{theme === 'light' ? 'DARK' : 'LIGHT'}</span>
           <HiMoon size={20} />
-        </div>
+        </button>
       </StyledNavBar>
     </Container>
   );
