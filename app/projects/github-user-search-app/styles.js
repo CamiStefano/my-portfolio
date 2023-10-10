@@ -11,6 +11,12 @@ export const Wrapper = styled.section`
   flex-direction: column;
   color: ${({ theme }) => theme.tertiaryDark};
   background: ${({ theme }) => theme.pageBackground};
+
+  & .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+  }
 `;
 
 export const Container = styled.div`

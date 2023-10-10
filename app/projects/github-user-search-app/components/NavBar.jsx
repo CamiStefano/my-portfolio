@@ -32,8 +32,8 @@ const StyledNavBar = styled.nav`
     font-family: inherit;
     display: flex;
 
-    &:active {
-      color: ${({ theme }) => theme.buttonActive};
+    &:hover {
+      color: ${({ theme }) => theme.toggleHover};
     }
 
     & span {

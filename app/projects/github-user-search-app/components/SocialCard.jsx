@@ -11,8 +11,26 @@ const StyledSocialCardContainer = styled.div`
   max-width: 30rem;
   display: flex;
   margin-left: 9.62rem;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0rem 2rem;
+  padding-right: 3rem;
+
+  div {
+    display: flex;
+    padding-top: 1.3rem;
+
+    & p {
+      color: ${({ theme }) => theme.lightBlue};
+
+      & a:hover {
+        text-decoration: underline;
+      }
+
+      & span {
+        padding-left: 1rem;
+      }
+    }
+  }
 
   @media (max-width: 768px) {
     margin-top: 0.5rem;
@@ -26,25 +44,31 @@ function SocialCardContainer() {
         <div>
           <p>
             <HiLocationMarker />
-            San Francisco
+            <span>San Francisco</span>
           </p>
         </div>
-        <div>
+        <div className="disabled">
           <p>
             <FaXTwitter />
-            Not Available
+            <span>
+              <a href="https://github.blog">Not Available</a>
+            </span>
           </p>
         </div>
         <div>
           <p>
             <HiLink />
-            <a href="https://github.blog">https://github.blog</a>
+            <span>
+              <a href="https://github.blog">https://github.blog</a>
+            </span>
           </p>
         </div>
         <div>
           <p>
             <BsBuildingsFill />
-            <a href="http://www.github.com/github">@github</a>
+            <span>
+              <a href="http://www.github.com/github">@github</a>
+            </span>
           </p>
         </div>
       </StyledSocialCardContainer>

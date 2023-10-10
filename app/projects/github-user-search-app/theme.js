@@ -14,6 +14,7 @@ export const lightTheme = {
   buttonActive: '#222731',
   inputSearch: '#222731',
   boxShadow: '0px 16px 30px -10px rgba(70, 96, 187, 0.2);',
+  toggleHover: '#222731',
 };
 
 export const darkTheme = {
@@ -32,4 +33,5 @@ export const darkTheme = {
   buttonActive: '#90A4D4',
   inputSearch: '#FFFFFF',
   boxShadow: 'none;',
+  toggleHover: '#90A4D4',
 };

@@ -12,7 +12,7 @@ const StyledStatCardContainer = styled.div`
   margin-left: 9.62rem;
   margin-top: 2rem;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem 4rem 2rem 2rem;
 
   div > h4 {
     color: ${({ theme }) => theme.lightBlue};

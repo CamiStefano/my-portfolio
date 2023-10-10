@@ -30,7 +30,6 @@ export default function GitHubSearch() {
         <NavBar theme={theme} setTheme={setTheme} />
         <SearchContainer />
         <UserCard />
-        <SocialCardContainer />
       </Wrapper>
     </ThemeProvider>
   );

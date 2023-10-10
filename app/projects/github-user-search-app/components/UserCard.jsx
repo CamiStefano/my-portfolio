@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { styled } from 'styled-components';
 import StatCard from './StatCard';
+import SocialCardContainer from './SocialCard';
 import { Container } from '../styles';
 
 const StyledUserCardContainer = styled.section`
@@ -19,6 +20,7 @@ const StyledUserCardContainer = styled.section`
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   & .profileContainer {
     display: flex;
@@ -106,6 +108,7 @@ function UserCardContainer() {
           </div>
         </div>
         <StatCard />
+        <SocialCardContainer />
       </StyledUserCardContainer>
     </Container>
   );
