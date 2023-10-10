@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { styled } from 'styled-components';
-// import { CgSun } from 'react-icons/cg';
+import { CgSun } from 'react-icons/cg';
 import { HiMoon } from 'react-icons/hi';
 import { Container } from '../styles';
 
@@ -50,7 +50,7 @@ function NavBar({ theme, setTheme }) {
         <h1>devfinder</h1>
         <button type="button" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
           <span>{theme === 'light' ? 'DARK' : 'LIGHT'}</span>
-          <HiMoon size={20} />
+          {theme === 'light' ? <HiMoon size={20} /> : <CgSun size={20} />}
         </button>
       </StyledNavBar>
     </Container>
