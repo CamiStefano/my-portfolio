@@ -32,9 +32,14 @@ const StyledNavBar = styled.nav`
     font-family: inherit;
     display: flex;
 
+    &:active {
+      color: ${({ theme }) => theme.buttonActive};
+    }
+
     & span {
       font-size: 0.8125rem;
       letter-spacing: 0.15625rem;
+      padding-right: 1rem;
     }
   }
 

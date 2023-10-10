@@ -11,7 +11,7 @@ const StyledUserCardContainer = styled.section`
   min-height: 26.1875rem;
   height: 100%;
   border-radius: 0.9375rem;
-  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  box-shadow: ${({ theme }) => theme.boxShadow};
   padding: 3rem;
   font-family: inherit;
   display: flex;
@@ -70,7 +70,7 @@ const StyledUserCardContainer = styled.section`
       font-size: 0.9375rem;
       font-weight: 400;
       line-height: 1.5625rem;
-      color: &;
+      color: ${({ theme }) => theme.lightBlue};
     }
   }
 `;

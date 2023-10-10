@@ -11,7 +11,7 @@ const StyledSearchContainer = styled.div`
   height: 4.3125rem;
   border-radius: 0.9375rem;
   background: ${({ theme }) => theme.background};
-  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  box-shadow: ${({ theme }) => theme.boxShadow};
   z-index: 10;
   padding: 0.6rem;
 
@@ -30,11 +30,23 @@ const StyledSearchContainer = styled.div`
       padding-inline-start: 1.5rem;
       justify-content: start;
       flex: 1 1 auto;
+      background-color: transparent;
+      font-size: 1.125rem;
+      line-height: 1.5625rem;
+      color: ${({ theme }) => theme.inputSearch};
     }
 
     & button {
       flex: 0 0 auto;
     }
+  }
+
+  ::placeholder {
+    color: ${({ theme }) => theme.lightBlue};
+  }
+
+  ::-ms-input-placeholder {
+    color: ${({ theme }) => theme.lightBlue};
   }
 
   & h1 {

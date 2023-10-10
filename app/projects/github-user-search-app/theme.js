@@ -11,6 +11,9 @@ export const lightTheme = {
   secondaryDark: '#141D2F',
   tertiaryDark: '#1E2A47',
   dark: '#222731',
+  buttonActive: '#222731',
+  inputSearch: '#222731',
+  boxShadow: '0px 16px 30px -10px rgba(70, 96, 187, 0.2);',
 };
 
 export const darkTheme = {
@@ -21,9 +24,12 @@ export const darkTheme = {
   primaryLight: '#2B3442',
   secondaryLight: '#141D2F',
   tertiaryLight: '#FFFFFF',
-  lightBlue: '#4B6A9B',
+  lightBlue: '#FFFFFF',
   primaryDark: '#FEFEFE',
   secondaryDark: '#F6F8FF',
   tertiaryDark: '#697C9A',
   dark: '#FFFFFF',
+  buttonActive: '#90A4D4',
+  inputSearch: '#FFFFFF',
+  boxShadow: 'none;',
 };
