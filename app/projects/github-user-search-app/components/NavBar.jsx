@@ -28,7 +28,7 @@ const StyledNavBar = styled.nav`
     font-size: 0.8125rem;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
     font-family: inherit;
     display: flex;
 

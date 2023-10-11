@@ -8,7 +8,6 @@ import { darkTheme, lightTheme } from './theme';
 import NavBar from './components/NavBar';
 import UserCard from './components/UserCard';
 import SearchContainer from './components/SearchBar';
-import SocialCardContainer from './components/SocialCard';
 
 export const SpaceMono = spaceMono({
   weight: ['400', '700'],
