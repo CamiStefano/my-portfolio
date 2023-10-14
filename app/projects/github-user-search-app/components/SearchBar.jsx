@@ -57,8 +57,28 @@ const StyledSearchContainer = styled.div`
     align-items: center;
   }
 
-  @media (max-width: 768px) {
-    max-width: 768px;
+  @media only screen and (min-width: 328px) and (max-width: 729px) {
+    max-width: 573px;
+  }
+
+  @media (max-width: 572px) {
+    max-width: 327px;
+    height: 3.75rem;
+    padding: 0.4rem 0.4rem 0.4rem 0.8rem;
+
+    & .inputWrapper {
+      padding-left: 0rem;
+
+      & input {
+        padding-inline-start: 0.5rem;
+        font-size: 0.8125rem;
+        line-height: 1.5625rem;
+      }
+    }
+
+    & .colorImg {
+      width: 20px;
+    }
   }
 `;
 

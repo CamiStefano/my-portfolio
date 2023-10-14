@@ -23,7 +23,10 @@ const Button = styled.button`
     background: #60abff;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 572px) {
+    width: 5.25rem;
+    height: 2.875rem;
+    font-size: 0.875rem;
   }
 `;
 

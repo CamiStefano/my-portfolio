@@ -36,9 +36,17 @@ export const Container = styled.div`
 
   @media only screen and (min-width: 328px) and (max-width: 729px) {
     max-width: 573px;
+
+    & .displayOff {
+      display: none;
+    }
+
+    & .displayOn {
+      display: block;
+    }
   }
 
-  @media (max-width: 327px) {
+  @media (max-width: 572px) {
     max-width: 327px;
   }
 `;

@@ -12,7 +12,7 @@ const StyledStatCardContainer = styled.div`
   margin-left: 9.62rem;
   margin-top: 2rem;
   justify-content: space-between;
-  padding: 1rem 4rem 2rem 2rem;
+  padding: 1rem 5rem 1rem 2rem;
 
   div > h4 {
     color: ${({ theme }) => theme.lightBlue};
@@ -27,8 +27,31 @@ const StyledStatCardContainer = styled.div`
     font-weight: 700;
   }
 
-  @media (max-width: 768px) {
-    margin-top: 0.5rem;
+  @media only screen and (min-width: 328px) and (max-width: 729px) {
+    max-width: 573px;
+    margin-left: 0rem;
+    margin-top: 0rem;
+  }
+
+  @media (max-width: 572px) {
+    max-width: 327px;
+
+    padding: 1.1rem 1.4rem;
+
+    & div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & h4 {
+        font-size: 0.6875rem;
+      }
+
+      & p {
+        font-size: 1rem;
+        padding-top: 0.5rem;
+      }
+    }
   }
 `;
 

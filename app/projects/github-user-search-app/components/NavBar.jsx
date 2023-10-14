@@ -12,12 +12,14 @@ const StyledNavBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 4.3125rem;
+  height: 2.375rem;
   background: transparent;
   color: ${({ theme }) => theme.tertiaryLight};
   z-index: 10;
+  padding: 2.25rem 0rem;
 
   & h1 {
+    font-size: 1.625rem;
     color: ${({ theme }) => theme.dark};
   }
 

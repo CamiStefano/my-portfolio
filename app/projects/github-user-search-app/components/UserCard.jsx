@@ -13,14 +13,13 @@ const StyledUserCardContainer = styled.section`
   height: 100%;
   border-radius: 0.9375rem;
   box-shadow: ${({ theme }) => theme.boxShadow};
-  padding: 3rem;
+  padding: 3rem 3rem 1rem 3rem;
   font-family: inherit;
   display: flex;
   background: ${({ theme }) => theme.background};
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 
   & .profileContainer {
     display: flex;
@@ -75,6 +74,72 @@ const StyledUserCardContainer = styled.section`
       color: ${({ theme }) => theme.lightBlue};
     }
   }
+
+  & .tabletOn {
+    display: none;
+  }
+
+  & .deskOff {
+  }
+
+  @media only screen and (min-width: 328px) and (max-width: 729px) {
+    max-width: 573px;
+
+    & .tabletOn {
+      display: block;
+    }
+
+    & .deskOff {
+      display: none;
+    }
+
+    & .dataContainer {
+      margin-top: 0rem;
+      margin-left: 0rem;
+      padding: 1.5rem 0rem 2rem 0rem;
+    }
+  }
+
+  @media (max-width: 572px) {
+    max-width: 327px;
+    padding: 1.9rem 1.5rem;
+
+    & .profileContainer {
+      & .gitHubAvatar {
+        margin-right: 1rem;
+        max-width: 70px;
+        max-height: 70px;
+      }
+
+      & .gitHubUser {
+        h1 {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          font-weight: 700;
+        }
+        a {
+          font-size: 0.8125rem;
+          line-height: 1.1875rem;
+          color: #0079ff;
+        }
+      }
+
+      & .gitHubUserJoined {
+        p {
+          font-size: 0.8125rem;
+        }
+      }
+    }
+
+    & .dataContainer {
+      padding: 1.4rem 0rem;
+
+      h3 {
+        font-size: 0.8125rem;
+        line-height: 1.5625rem;
+      }
+    }
+  }
 `;
 
 function UserCardContainer() {
@@ -95,8 +160,11 @@ function UserCardContainer() {
             <a href="http://" target="_blank" rel="noopener noreferrer">
               @octocat
             </a>
+            <div className="gitHubUserJoined tabletOn">
+              <p>Joined 25 Jan 2011</p>
+            </div>
           </div>
-          <div className="gitHubUserJoined">
+          <div className="gitHubUserJoined deskOff">
             <p>Joined 25 Jan 2011</p>
           </div>
         </div>

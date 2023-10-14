@@ -17,23 +17,46 @@ const StyledSocialCardContainer = styled.div`
 
   div {
     display: flex;
-    padding-top: 1.3rem;
+    flex-direction: column;
+    padding-top: 1rem;
 
-    & p {
-      color: ${({ theme }) => theme.lightBlue};
+    & div {
+      display: flex;
 
-      & a:hover {
-        text-decoration: underline;
-      }
+      & p {
+        color: ${({ theme }) => theme.lightBlue};
+        display: flex;
+        align-items: center;
+        line-height: 1.5rem;
 
-      & span {
-        padding-left: 1rem;
+        & a:hover {
+          text-decoration: underline;
+        }
+
+        & span {
+          padding-left: 1rem;
+          font-size: 0.9375rem;
+        }
       }
     }
   }
 
-  @media (max-width: 768px) {
-    margin-top: 0.5rem;
+  @media only screen and (min-width: 328px) and (max-width: 729px) {
+    max-width: 573px;
+    margin-left: 0rem;
+  }
+
+  @media (max-width: 572px) {
+    max-width: 327px;
+
+    & div {
+      padding-top: 0.5rem;
+
+      & span {
+        padding-left: 0rem;
+        font-size: 0.8125rem;
+      }
+    }
   }
 `;
 
@@ -42,34 +65,38 @@ function SocialCardContainer() {
     <Container>
       <StyledSocialCardContainer>
         <div>
-          <p>
-            <HiLocationMarker />
-            <span>San Francisco</span>
-          </p>
-        </div>
-        <div className="disabled">
-          <p>
-            <FaXTwitter />
-            <span>
-              <a href="https://github.blog">Not Available</a>
-            </span>
-          </p>
-        </div>
-        <div>
-          <p>
-            <HiLink />
-            <span>
-              <a href="https://github.blog">https://github.blog</a>
-            </span>
-          </p>
+          <div>
+            <p>
+              <HiLocationMarker />
+              <span>San Francisco</span>
+            </p>
+          </div>
+          <div>
+            <p>
+              <HiLink />
+              <span>
+                <a href="https://github.blog">https://github.blog</a>
+              </span>
+            </p>
+          </div>
         </div>
         <div>
-          <p>
-            <BsBuildingsFill />
-            <span>
-              <a href="http://www.github.com/github">@github</a>
-            </span>
-          </p>
+          <div className="disabled">
+            <p>
+              <FaXTwitter />
+              <span>
+                <a href="https://github.blog">Not Available</a>
+              </span>
+            </p>
+          </div>
+          <div>
+            <p>
+              <BsBuildingsFill />
+              <span>
+                <a href="http://www.github.com/github">@github</a>
+              </span>
+            </p>
+          </div>
         </div>
       </StyledSocialCardContainer>
     </Container>
