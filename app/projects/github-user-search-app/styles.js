@@ -34,8 +34,8 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
 
-  @media only screen and (min-width: 300px) and (max-width: 327px) {
-    max-width: 327px;
+  @media only screen and (min-width: 328px) and (max-width: 729px) {
+    max-width: 573px;
   }
 
   @media (max-width: 327px) {
