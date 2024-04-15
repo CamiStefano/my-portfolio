@@ -9,30 +9,20 @@ import Button from './Button';
 const Background = styled.footer`
   width: 100%;
   background-color: ${theme.dark};
+  padding: 0rem 2rem;
 `;
 
 const StyledFooter = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   height: 7.5rem;
-  padding: 0rem 2.5rem;
+  z-index: 10;
 
-  & button {
-    background: ${theme.gradient2};
-
-    &:hover {
-      background: ${theme.gradient2hover};
-    }
-  }
-
-  & .title {
-    color: ${theme.darkNavy};
-    padding-bottom: 1.75rem;
-
-    @media (max-width: 768px) {
-      padding-bottom: 1.5rem;
-    }
+  @media (max-width: 768px) {
+    max-width: 768px;
   }
 `;
 
@@ -42,7 +32,7 @@ function Footer() {
       <Container>
         <StyledFooter>
           <LogoLight />
-          <Button>Get Started</Button>
+          <Button variant="secondary">Get Started</Button>
         </StyledFooter>
       </Container>
     </Background>

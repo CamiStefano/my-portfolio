@@ -16,15 +16,6 @@ const StyledNavBar = styled.nav`
   background-color: transparent;
   z-index: 10;
 
-  & button {
-    background: ${theme.dark};
-    transition: all 0.4s ease;
-
-    &:hover {
-      background: ${theme.lightBlue};
-    }
-  }
-
   @media (max-width: 768px) {
     max-width: 768px;
   }

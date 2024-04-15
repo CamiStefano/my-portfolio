@@ -60,15 +60,6 @@ const StyledHero = styled.section`
     }
   }
 
-  & .button {
-    background: ${theme.gradient1};
-    transition: all 0.4s ease;
-
-    &:hover {
-      background: ${theme.gradient1hover};
-    }
-  }
-
   @media only screen and (max-width: 1280px) {
     padding: 4rem 0rem 0rem;
     height: 32rem;
@@ -92,7 +83,7 @@ function Hero() {
             Our modern courses across a range of in-demand skills will give you the knowledge you
             need to live the life you want.
           </Paragraph>
-          <Button className="button">Get Started</Button>
+          <Button variant="primary">Get Started</Button>
         </div>
         <div className="main__section__image">
           <Image
