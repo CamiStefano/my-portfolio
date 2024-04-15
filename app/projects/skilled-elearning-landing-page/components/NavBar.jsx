@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { styled } from 'styled-components';
-import { Container, theme } from '../styles';
+import { Container } from '../styles';
 import { LogoDark } from '../icons';
 import Button from './Button';
 

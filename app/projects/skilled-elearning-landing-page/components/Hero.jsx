@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { styled } from 'styled-components';
-import { theme, Title, Paragraph, Container } from '../styles';
+import { Title, Paragraph, Container } from '../styles';
 import Button from './Button';
 
 const StyledHero = styled.section`
